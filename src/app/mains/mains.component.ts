@@ -11,5 +11,19 @@ export class MainsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  show = 'true';
+  name : string;
+
+  select_main(name){
+    if(name == 'pi'){
+
+    }
+    if(name == 'pa'){
+
+    }
+    if(name == 'ci'){
+
+    }
+  }
 
 }

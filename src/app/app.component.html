@@ -16,9 +16,11 @@
       </tr>
     </table>
 
-    <br><button>Start</button><br>
+    <div *ngIf='restart'>
+      <br><button (clic)="start_game()">Start</button><br>
+    </div>    
 
-    <div> <!-- if bouton start is clic-->
+    <div *ngIf='start'> <!-- if bouton start is clic-->
       <table>
         <tr>
           <th>mains joueur</th>
@@ -26,7 +28,7 @@
         </tr>
         <tr>
           <td><app-mains></app-mains></td>
-          <td><app-mains></app-mains></td>
+          <td><app-mains *ngIf='main_ordi'></app-mains></td>
         </tr>
       </table>
     </div>
