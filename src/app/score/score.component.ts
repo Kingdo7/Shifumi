@@ -16,4 +16,9 @@ export class ScoreComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Ici on va afficher le score
+   * pour cela il va falloir incrémenter la variable X ou Y
+   * bonus, donner un fond vert en cas de score sup à l'ordi
+   */
 }

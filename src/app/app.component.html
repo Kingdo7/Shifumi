@@ -16,19 +16,19 @@
       </tr>
     </table>
 
-    <div *ngIf='restart'>
+    <div *ngIf="restart" > <!-- when bouton start is clic, restart = false -->
       <br><button (clic)="start_game()">Start</button><br>
     </div>    
 
-    <div *ngIf='start'> <!-- if bouton start is clic-->
+    <div *ngIf="start"> <!-- if bouton start is clic -->
       <table>
         <tr>
           <th>mains joueur</th>
           <th>mains ordi</th>
         </tr>
         <tr>
-          <td><app-mains></app-mains></td>
-          <td><app-mains *ngIf='main_ordi'></app-mains></td>
+          <td><app-game></app-game></td>
+          <td><app-game *ngIf="main_ordi"></app-game></td>
         </tr>
       </table>
     </div>

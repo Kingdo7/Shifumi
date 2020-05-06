@@ -13,7 +13,11 @@ export class MainsComponent implements OnInit {
   }
   show = 'true';
   name : string;
-
+ /** Ici on détermine la couleur le la main 
+  * jaune de base
+  * vert en cas de victoire
+  * rouge en cas de défaite 
+  */
   select_main(name){
     if(name == 'pi'){
 

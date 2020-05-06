@@ -12,4 +12,7 @@ export class ReglesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /** RAS
+   * juste l'affichage des règles du jeu
+   */
 }
