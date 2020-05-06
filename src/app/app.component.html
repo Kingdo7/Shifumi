@@ -2,4 +2,25 @@
   <title>Shifumi</title>>
 </head>
 <body>
+  <div [align]="alignement"><h1>Shifumi</h1></div>
+
+  <div [align]="alignement">
+    <table>
+      <tr>
+        <th colspan="2">Règles du jeu</th>
+      </tr>
+      <tr>
+        <td><app-regles></app-regles></td>
+      </tr>
+
+      <tr>
+        <th>mains joueur</th>
+        <th>mains ordi</th>
+      </tr>
+      <tr>
+        <td><app-mains></app-mains></td>
+        <td><app-mains></app-mains></td>
+      </tr>
+    </table>
+  </div>
 </body>
