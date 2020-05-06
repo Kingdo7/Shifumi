@@ -1,12 +1,27 @@
-<!--
-<div [hidden]="show">
-    <button (clic)="select_main(name)" name="pi"><img src="assets/pierre_base.png" /></button>
-    <button (clic)="select_main(name)" name="pa"><img src="assets/papier_base.png" /></button>
-    <button (clic)="select_main(name)" name="ci"><img src="assets/ciseau_base.png" /></button>
+<!-- <div class="btn-group" role="group">
+    <button (click)="select_main(src)" type="button" class="btn btn-secondary">
+        <img src="assets/pierre_base.png" />
+    </button>
+
+    <button (click)="select_main(src)" type="button" class="btn btn-secondary">
+        <img src="assets/papier_base.png" />
+    </button>
+
+    <button (click)="select_main(src)" type="button" class="btn btn-secondary">
+        <img src="assets/ciseau_base.png" />
+    </button>
 </div>
 -->
-<div>
-    <button><img src="assets/pierre_base.png" /></button>
-    <button><img src="assets/papier_base.png" /></button>
-    <button><img src="assets/ciseau_base.png" /></button>
+<div class="btn-group" role="group">
+    <button (click)="select_main()" type="button" class="btn btn-secondary">
+        Pierre
+    </button>
+
+    <button (click)="select_main()" type="button" class="btn btn-secondary">
+        Papier
+    </button>
+    
+    <button (click)="select_main()" type="button" class="btn btn-secondary">
+        Ciseaux
+    </button>
 </div>

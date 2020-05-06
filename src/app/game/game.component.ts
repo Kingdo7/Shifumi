@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class GameComponent implements OnInit {
 
   constructor() { }
+  j_choice : boolean = true;
+  resultat : boolean;
+  selectJoueur : string;
 
   ngOnInit(): void {
   }
@@ -20,4 +23,7 @@ export class GameComponent implements OnInit {
  * - donner le résultat
  * - envoyer le résultat dans le score
  */
+  check(selectJoueur){
+    console.log('check', selectJoueur);
+  }
 }

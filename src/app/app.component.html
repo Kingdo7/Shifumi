@@ -2,7 +2,7 @@
   <title>Shifumi</title>>
 </head>
 <body>
-  <div [align]="alignement"><h1>Shifumi</h1></div>
+  <div [align]="alignement" class="alert alert-primary" ><h1>Shifumi</h1></div>
 
   <div [align]="alignement" *ngIf="restart"><!-- when bouton start is clic, restart = false -->
     <table>
@@ -16,10 +16,12 @@
       </tr>
     </table>
     
-    <br><button (click)="start_game()">Start</button><br>
+    <br><button (click)="start_game()" type="button" class="btn btn-primary btn-lg">Start</button><br>
   </div>    
 
-  <div *ngIf="start"> <!-- if bouton start is clic -->
+  <!--<div *ngIf="start"> 
+    POUR TEST CAR FEME DE CLIC A CHAQUE FOIS-->  <!-- if bouton start is clic -->
+  <div>
     <table>
       <tr>
         <th>mains joueur</th>
@@ -27,7 +29,7 @@
       </tr>
       <tr>
         <td><app-game></app-game></td>
-        <td><app-game *ngIf="main_ordi"></app-game></td>
+        <td><app-game></app-game></td>
       </tr>
     </table>
   </div>

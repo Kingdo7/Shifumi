@@ -16,7 +16,7 @@ export class AppComponent {
    */
 
   /* Lorsqu'on appuie sur le bouton, le bouton disparait et le tableau de jeu apparait*/
-  start_game(){ // ne fonctionne pas 
+  start_game(){ 
     this.start = true;
     this.restart = false;
     console.log('start', this.start);

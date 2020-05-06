@@ -1,1 +1,7 @@
-<p>game works!</p>
+<div *ngIf="j_choice"> <!-- tant que le joueur n'a pas choisi de main-->
+    <app-mains (sendMainToGame)="check(selectJoueur)"></app-mains>
+</div>
+
+<div *ngIf="resultat"> <!-- Afficher le resultat -->
+
+</div>
