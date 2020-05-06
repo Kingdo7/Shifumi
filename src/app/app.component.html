@@ -7,20 +7,29 @@
   <div [align]="alignement">
     <table>
       <tr>
-        <th colspan="2">Règles du jeu</th>
+        <th>Règles du jeu</th>
+        <th>Score</th>
       </tr>
       <tr>
         <td><app-regles></app-regles></td>
-      </tr>
-
-      <tr>
-        <th>mains joueur</th>
-        <th>mains ordi</th>
-      </tr>
-      <tr>
-        <td><app-mains></app-mains></td>
-        <td><app-mains></app-mains></td>
+        <td><app-score></app-score></td>
       </tr>
     </table>
+
+    <br><button>Start</button><br>
+
+    <div> <!-- if bouton start is clic-->
+      <table>
+        <tr>
+          <th>mains joueur</th>
+          <th>mains ordi</th>
+        </tr>
+        <tr>
+          <td><app-mains></app-mains></td>
+          <td><app-mains></app-mains></td>
+        </tr>
+      </table>
+    </div>
+    
   </div>
 </body>
