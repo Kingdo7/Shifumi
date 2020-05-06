@@ -4,24 +4,16 @@
     </button>
 
     <button (click)="select_main(src)" type="button" class="btn btn-secondary">
-        <img src="assets/papier_base.png" />
+        <img src='assets/papier_base.png' />
     </button>
 
     <button (click)="select_main(src)" type="button" class="btn btn-secondary">
-        <img src="assets/ciseau_base.png" />
+        <img src='assets/ciseau_base.png' />
     </button>
 </div>
 -->
-<div class="btn-group" role="group">
-    <button (click)="select_main()" type="button" class="btn btn-secondary">
-        Pierre
-    </button>
-
-    <button (click)="select_main()" type="button" class="btn btn-secondary">
-        Papier
-    </button>
-    
-    <button (click)="select_main()" type="button" class="btn btn-secondary">
-        Ciseaux
+<div>
+    <button (click)="select_main(nom)" type="button" class="btn btn-light">
+        <img src="{{ nom }}" />
     </button>
 </div>

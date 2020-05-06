@@ -1,7 +1,9 @@
 <div *ngIf="j_choice"> <!-- tant que le joueur n'a pas choisi de main-->
-    <app-mains (sendMainToGame)="check(selectJoueur)"></app-mains>
+    <app-mains nom="assets/pierre_base.png" (sendMainToGame)="check(nom)"></app-mains>
+    <app-mains nom="assets/papier_base.png" (sendMainToGame)="check(nom)"></app-mains>
+    <app-mains nom="assets/ciseau_base.png" (sendMainToGame)="check(nom)"></app-mains>
 </div>
 
 <div *ngIf="resultat"> <!-- Afficher le resultat -->
-
+    <app-mains></app-mains>
 </div>

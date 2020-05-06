@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mains',
@@ -8,19 +8,33 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class MainsComponent implements OnInit {
 
   constructor() { }
-  @Output()sendMainToGame = new EventEmitter();
+  @Output() sendMainToGame = new EventEmitter();
+  @Input() nom : string;
 
   ngOnInit(): void {
   }
   show = 'true';
-  selectJoueur : string;
- /** Ici on détermine la couleur le la main 
+  Pierre : boolean = true;
+  Papier : boolean = true;
+  Ciseaux : boolean = true;
+
+  /** Ici on récupère le bouton sélectionner par le joueur et on l'envoie à game **/
+  select_main(nom){
+    if (this.nom == "assets/pierre_base.png") {
+      this.nom = 'Pierre';
+    } else 
+    if (this.nom == "assets/papier_base.png") {
+      this.nom = 'Papier';
+    } else {
+      this.nom = 'Ciseaux';
+    }
+    console.log('Envoie :', this.nom);
+    this.sendMainToGame.emit(this.nom);
+  }
+
+  /** Ici on détermine la couleur le la main 
   * jaune de base
   * vert en cas de victoire
   * rouge en cas de défaite 
   */
-  select_main(){
-    console.log('select joueur', this.selectJoueur);
-    this.sendMainToGame.emit(this.selectJoueur);
-  }
 }

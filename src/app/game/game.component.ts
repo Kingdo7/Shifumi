@@ -10,7 +10,7 @@ export class GameComponent implements OnInit {
   constructor() { }
   j_choice : boolean = true;
   resultat : boolean;
-  selectJoueur : string;
+  nom : string;
 
   ngOnInit(): void {
   }
@@ -23,7 +23,7 @@ export class GameComponent implements OnInit {
  * - donner le résultat
  * - envoyer le résultat dans le score
  */
-  check(selectJoueur){
-    console.log('check', selectJoueur);
+  check(nom){
+    console.log('Reception', nom);
   }
 }
