@@ -10,6 +10,10 @@ export class AppComponent {
   start : boolean;
   restart : boolean = true;
   main_ordi : boolean;
+  /**
+   * Gestion de base du programme
+   * Gère l'affichage de la partie
+   */
 
   /* Lorsqu'on appuie sur le bouton, le bouton disparait et le tableau de jeu apparait*/
   start_game(){ // ne fonctionne pas 

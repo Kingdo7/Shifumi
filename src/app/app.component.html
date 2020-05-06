@@ -4,7 +4,7 @@
 <body>
   <div [align]="alignement"><h1>Shifumi</h1></div>
 
-  <div [align]="alignement">
+  <div [align]="alignement" *ngIf="restart"><!-- when bouton start is clic, restart = false -->
     <table>
       <tr>
         <th>Règles du jeu</th>
@@ -15,23 +15,21 @@
         <td><app-score></app-score></td>
       </tr>
     </table>
-
-    <div *ngIf="restart" > <!-- when bouton start is clic, restart = false -->
-      <br><button (clic)="start_game()">Start</button><br>
-    </div>    
-
-    <div *ngIf="start"> <!-- if bouton start is clic -->
-      <table>
-        <tr>
-          <th>mains joueur</th>
-          <th>mains ordi</th>
-        </tr>
-        <tr>
-          <td><app-game></app-game></td>
-          <td><app-game *ngIf="main_ordi"></app-game></td>
-        </tr>
-      </table>
-    </div>
     
+    <br><button (click)="start_game()">Start</button><br>
+  </div>    
+
+  <div *ngIf="start"> <!-- if bouton start is clic -->
+    <table>
+      <tr>
+        <th>mains joueur</th>
+        <th>mains ordi</th>
+      </tr>
+      <tr>
+        <td><app-game></app-game></td>
+        <td><app-game *ngIf="main_ordi"></app-game></td>
+      </tr>
+    </table>
   </div>
+
 </body>
