@@ -8,15 +8,11 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class MainsComponent implements OnInit {
 
   constructor() { }
-  @Output() sendMainToGame = new EventEmitter();
+  @Output() sendMainsToGame = new EventEmitter();
   @Input() nom : string;
 
   ngOnInit(): void {
   }
-  show = 'true';
-  Pierre : boolean = true;
-  Papier : boolean = true;
-  Ciseaux : boolean = true;
 
   /** Ici on récupère le bouton sélectionner par le joueur et on l'envoie à game **/
   select_main(nom){
@@ -29,7 +25,7 @@ export class MainsComponent implements OnInit {
       this.nom = 'Ciseaux';
     }
     console.log('Envoie :', this.nom);
-    this.sendMainToGame.emit(this.nom);
+    this.sendMainsToGame.emit(this.nom);
   }
 
   /** Ici on détermine la couleur le la main 
